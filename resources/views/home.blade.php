@@ -14,7 +14,12 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                   You are logged in!
+                      <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{asset('/sslchecker')}}">Sll Checker</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
