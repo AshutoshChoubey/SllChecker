@@ -72,7 +72,7 @@
                   <tbody>
                       @foreach($sllChecker as $key => $value)
                       <tr id="removeAfterDelete__{{ $value['id'] }}">
-                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ (($sllChecker->currentPage() - 1 ) * $sllChecker->perPage() ) + $loop->iteration }}</td>
                         <td>{{ $value->domain_name }}</td>
                         <td id="ssl_expiry__{{  $value->id }}">{{ ($value->ssl_expiry!=null)?$value->ssl_expiry:'unchecked' }}</td>
                         <td id="ssl_issuer__{{  $value->id }}">{{ ($value->ssl_issuer!=NULL)?$value->ssl_issuer:'unchecked' }}</td>
